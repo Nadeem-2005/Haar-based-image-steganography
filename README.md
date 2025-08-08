@@ -55,7 +55,7 @@ SSIM: 0.9987
 Domain Robustness Analysis:
 LL domain appears more robust against attacks
 
-### 2. Run the Code
+## 🚀 How to Run
 
 In MATLAB:
 
@@ -65,11 +65,69 @@ embedd('cover_image1.jpg', 'Hello, World !!', 'stego_image1.png');
 extractt('stego_image1.png', 'cover_image1.jpg', length('Hello, World !!'));
 
 % LL domain embedding and extraction
-embedd_LL('cover_image1.jpg', 'Hello, World !!', 'stego_image1.png');
+embedd_LL('cover_image1.jpg', 'Hello, World !!', 'stego_image1_LL.png');
 extractt_LL('stego_image1_LL.png', 'cover_image1.jpg', length('Hello, World !!'));
 
 % Robustness testing against attacks
 attackk('stego_image1.png', 'cover_image1.jpg');
+```
 
-## 📂 Project Structure
+You can also run multiple samples using the batch calls at the bottom of the script.
+
+---
+
+## 📈 Sample Output (Text Console)
+
+```
+PSNR: 43.12 dB  
+Extracted Message: Hello, World !!  
+MSE: 0.000123  
+SSIM: 0.9987  
+
+Domain Robustness Analysis:  
+LL domain appears more robust against attacks
+```
+
+---
+
+## ⚠️ Limitations
+
+- Designed for grayscale images (RGB gets auto-converted).
+- Embedding capacity depends on image size and DWT domain.
+- Not resistant to very heavy image distortions or cropping.
+
+---
+
+## 🔮 Future Work
+
+- Add color image support (e.g., RGB channels or YCbCr).
+- GUI-based interface for ease of use.
+- Auto-testing framework for attacks + reporting.
+
+---
+
+## 🧑‍💻 Author
+
+Kishore
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+---
+
+## 💬 Acknowledgments
+
+- DWT-based image processing inspired by academic research  
+- MATLAB documentation and community resources  
+- Image Processing Toolbox (MathWorks)
+
+---
+
+## 🏷️ Tags
+
+`matlab` `steganography` `wavelet` `dwt` `psnr` `ssim` `image-processing` `robustness`
+
 
